@@ -664,10 +664,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero__text { display: contents; }
   .hero .eyebrow { order: 1; }
   .hero__title { order: 2; }
-  .hero__media { order: 3; margin-top: 18px; margin-bottom: 8px; }
-  .hero__lead { order: 4; }
-  .hero__ctas { order: 5; }
-  .hero__info { order: 6; }
+  .hero__media { order: 4; margin-top: 14px; margin-bottom: 8px; }
+  .hero__lead { order: 5; }
+  .hero__ctas { order: 6; }
+  .hero__info { order: 3; }
   .hero__brand-big { margin-bottom: 6px; }
   .hero__brand-big small { font-size: 12px; margin-bottom: .4em; }
   .hero__brand-big strong { font-size: clamp(34px, 10vw, 54px); }
@@ -681,4 +681,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero__title-sub { margin-top: 12px; }
   .hero__lead { margin-top: 18px; }
   .hero__ctas { margin-top: 24px; }
+}
+@media (max-width: 600px) {
+  /* contatos compactos logo abaixo do título, antes dos veículos */
+  .hero__info { margin-top: 16px; padding-top: 14px; gap: 8px; }
+  .hero__info li { gap: 10px; }
+  .hero__info-ico { width: 34px; height: 34px; border-radius: 9px; }
+  .hero__info-ico svg { width: 17px; height: 17px; }
+  .hero__info small { font-size: 10px; }
+  .hero__info strong { font-size: 14.5px; }
 }
