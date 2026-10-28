@@ -642,3 +642,18 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .js .reveal, .js-split .palavra { opacity: 1; transform: none; }
 }
+
+/* nome da autoescola em destaque acima dos veículos */
+.hero__brand-big {
+  position: relative; z-index: 2; margin: 0 0 6px; text-align: right; padding-right: 6%;
+  font-family: var(--display); font-style: italic; text-transform: uppercase; line-height: .9;
+}
+.hero__brand-big small { display: block; margin-bottom: .55em; font-weight: 800; font-size: clamp(16px, 1.6vw, 24px); letter-spacing: .38em; color: var(--white); opacity: .85; }
+.hero__brand-big strong {
+  display: block; font-weight: 900; font-size: clamp(48px, 6.4vw, 104px); letter-spacing: -.01em;
+  color: var(--yellow); text-shadow: .05em .05em 0 var(--red);
+}
+@media (max-width: 920px) {
+  .hero__brand-big { text-align: center; padding-right: 0; margin-bottom: 18px; }
+  .hero__brand-big strong { font-size: clamp(44px, 13vw, 72px); }
+}
