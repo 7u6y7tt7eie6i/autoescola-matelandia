@@ -27,6 +27,26 @@
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
 
+  /* ── Links internos sem "#secao" na barra de endereço ── */
+  function limparHash() {
+    if (location.hash && history.replaceState) {
+      history.replaceState(null, '', location.pathname + location.search);
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href^="#"]');
+    if (!link) return;
+    var id = link.getAttribute('href').slice(1);
+    var alvo = id && document.getElementById(id);
+    if (!alvo) return;
+    e.preventDefault();
+    if (id === 'inicio') window.scrollTo({ top: 0, behavior: reduz ? 'auto' : 'smooth' });
+    else alvo.scrollIntoView({ behavior: reduz ? 'auto' : 'smooth', block: 'start' });
+    limparHash();
+  });
+  /* quem abrir um link antigo com #secao: rola até lá e limpa o endereço */
+  window.addEventListener('load', limparHash);
+
   /* ── 16 · Revelar palavra por palavra ────────────── */
   function revelarPalavras(el) {
     if (!el.dataset.pronto) {
