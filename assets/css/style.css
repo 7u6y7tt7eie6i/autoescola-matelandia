@@ -734,3 +734,50 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .hero__tags b { width: 22px; height: 19px; font-size: 11px; padding-top: 5px; }
   .hero__score { top: -14px; bottom: auto; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   TELAS GRANDES (computador) — tudo um pouco maior.
+   Só vale a partir de 1400px; celular e tablet ficam iguais.
+   ══════════════════════════════════════════════════════════ */
+@media (min-width: 1400px) {
+  :root { --container: 1360px; }
+  body { font-size: 18px; }
+
+  /* header */
+  .header__inner { height: 88px; }
+  html { scroll-padding-top: 96px; }
+  .header__logo img { width: 62px; height: 62px; }
+  .header__brand small { font-size: 13px; }
+  .header__brand strong { font-size: 29px; }
+  .nav { gap: 38px; }
+  .nav a:not(.btn) { font-size: 19px; }
+  .header__cta { padding: 13px 28px; font-size: 18px; }
+
+  /* botões e títulos de seção */
+  .btn { font-size: 19px; padding: 15px 28px; }
+  .btn--lg { font-size: 23px; padding: 19px 36px; }
+  .eyebrow { font-size: 17px; }
+  .title { font-size: clamp(64px, 4.4vw, 80px); }
+  .section__head { max-width: 760px; }
+  .section__lead { font-size: 20px; max-width: 620px; }
+
+  /* hero */
+  .hero { padding: 150px 0 110px; }
+  .hero > .container { max-width: 1640px; }
+  .hero__grid { gap: 56px; }
+  .hero__media { width: min(130%, calc(102% + (100vw - min(1640px, 100vw)) / 2 - 12px)); }
+  .hero__title { font-size: clamp(92px, 6.6vw, 124px); }
+  .hero__title-sub { font-size: clamp(34px, 2.5vw, 44px); margin-top: 22px; }
+  .hero__lead { font-size: 22px; max-width: 600px; margin-top: 30px; }
+  .hero__ctas { gap: 18px; margin-top: 42px; }
+  .hero__info { margin-top: 44px; padding-top: 32px; gap: 20px 34px; }
+  .hero__info-ico { width: 50px; height: 50px; }
+  .hero__info-ico svg { width: 23px; height: 23px; }
+  .hero__info small { font-size: 13px; }
+  .hero__info strong { font-size: 17.5px; }
+  .hero__score { padding: 15px 22px; }
+  .hero__score strong { font-size: 52px; }
+  .hero__score .stars, .hero__score small { font-size: 15px; }
+  .hero__tags li { font-size: 16px; padding: 6px 15px 6px 6px; }
+  .hero__tags b { width: 34px; height: 30px; font-size: 16px; padding-top: 8px; }
+}
